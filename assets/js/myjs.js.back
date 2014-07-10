@@ -1,0 +1,355 @@
+$(document).ready(function() {  
+// User Subjects Ajax Add Subjects
+    $('#subject_list tr td a').click(function (e) {
+    e.preventDefault();
+      var parent = $(this).closest('tr');
+      var cloned_parent = parent.clone();
+      parent.addClass('success');
+        $.ajax({
+            url: $(this).attr('href'),
+            type: "GET",
+            dataType: "text",
+            success: function (data) {
+             alert(data);
+             // $('#container').append(data);
+             // $('#user_subjects table').append(cloned_parent);
+              //cloned_parent.find('td:first').hide();
+              //cloned_parent.find('td:last').append("<td></td>");
+              parent.hide('slow');
+//                var result = $('<div />').append(html).find('#paginated').html();
+//                $('#paginated').html(result);
+//                
+//                
+//                var result = $('<div />').append(html).find('#user_subjects').html();
+//                $('#user_subjects').html(result);
+//                
+//                $('#user_subjects_total').prepend().
+                  //alert();
+            },
+            error: function (xhr, status) {
+                alert("Sorry, there was a problem!");
+            },
+            complete: function (xhr, status) {
+                //$('#showresults').slideDown('slow')
+            }
+        });
+    }); 
+
+// Add subjects
+    $('.pagination li a').click(function (e) {
+    e.preventDefault();
+        $.ajax({
+            url: $(this).attr('href'),
+            type: "GET",
+            dataType: "html",
+            success: function (html) {
+                var result = $('<div />').append(html).find('#paginated').html();
+                $('#paginated').html(result);
+
+            },
+            error: function (xhr, status) {
+                alert("Sorry, there was a problem!");
+            },
+            complete: function (xhr, status) {
+                //$('#showresults').slideDown('slow')
+            }
+        });
+    }); 
+    
+    $('a.confirm-deletion').click(function(e){
+      e.preventDefault();
+      var url = $(this).attr('href');
+      var tr = $(this).closest('tr');
+      $('#myModal').modal('show');
+      $('#myModal #confirm').click(function(){
+        //window.location = url;
+        $('#myModal').modal('hide');
+        tr.addClass('danger');
+        $.ajax({
+            url: url,
+            type: "POST",
+            success: function () {
+              tr.hide('slow');
+            },
+            error: function (xhr, status) {
+                alert("Sorry, there was a problem!");
+            },
+            complete: function (xhr, status) {
+                //$('#showresults').slideDown('slow')
+            }
+        });
+      });
+    });
+    
+// End User Subject Ajax
+    
+
+    
+    // --- Hide Image ---
+    $( '#ajaxLoadAni' ).fadeOut( 'slow' );
+    
+    // --- Calendar Function ---
+    $( ".datepicker" ).datepicker({
+            changeMonth: true,
+            changeYear: true,
+            yearRange:"1995:y"
+    });
+	
+	$( ".date_pick" ).datepicker({
+            changeMonth: true,
+            changeYear: true,
+            yearRange:"1985:y",
+			dateFormat:'yy-mm-dd'
+    });
+    
+    $( ".datepicker2" ).datepicker({
+            changeMonth: true,
+            changeYear: true,
+            minDate: "-15y",
+            maxDate: "y"
+    });
+	
+    $( ".datepicker-payment" ).datepicker({
+		changeMonth: true
+    });	
+	
+    
+	$( ".datepicker3" ).datepicker({
+            changeMonth: true,
+            changeYear: true,
+        });
+	
+    // --- Accordion Function ---
+    $('.accordion h3.head').click(function() {
+        $(this).next().slideToggle('slow');
+        return false;
+    })
+    $('.accordion h3.head2').click(function() {
+        $(this).prev().slideToggle('slow');
+        return false;
+    });
+    
+    // --- Student Stat ---
+    $( '.studentStat' ).click(function(){
+        var a = $('input[name=student_status]:checked').val();
+        if(a=='new')
+        {
+            $('input[name=student_id]').val('');
+            $('#studentId').css({ "display" : "none" });
+        }
+        else
+        {
+            $('#studentId').css({ "display" : "block" });
+        }
+    });
+	
+	//Puts Red Border Color on required fields
+	$('.not_blank').each(function(){
+		
+		$('.not_blank').each(function(){
+		
+			var xdata = $(this).val().trim();
+			
+			if(xdata == "")
+			{
+				$(this).css('border-color','red');
+				$(this).attr('placeHolder','Required');
+			}
+			
+			$(this).focusout(function(){
+				
+				var xdata = $(this).val().trim();
+				
+				if(xdata != ""){
+					$(this).css('border-color','gray');
+				}else{
+					
+					$(this).css('border-color','red');
+					$(this).attr('placeHolder','Required');
+				}
+			});
+		})
+		
+	});
+    
+    // --- Modal ---
+    $( '#msgDialog' ).dialog({
+        autoOpen: false,
+        
+        buttons: {
+            'Ok': function() {
+                $( this ).dialog( 'close' );
+            }
+        }
+    });
+    
+    // --- Tab ---
+    // Tabs
+    $('#tabs').tabs();
+    
+    // --- Get The Base URL ---
+    var baseurl = $('#baseurl').val();    
+    
+    // --- Confirm Deletion ---
+    
+    $('a.confirm').click(function(e){
+      e.preventDefault();
+      var url = $(this).attr('href');
+      $('#myModal').modal('show');
+      $('#myModal #confirm').click(function(){
+        window.location = url;
+      });
+    });
+    
+    $('a.confirm-auto').click(function(e){
+      e.preventDefault();
+      var url = $(this).attr('href');
+      $('#myModal').modal('show');
+      $('#myModal #confirm').click(function(){
+        window.location = url;
+      });
+    });
+//    $( 'a.confirm' ).click(function(e){
+//        e.preventDefault();
+//		$('body').addClass('disable_scroll');
+//		
+//        var theHREF = $(this).attr("href");
+//		var title = $(this).attr("title");
+//		console.log(title);
+//      if(!title ){
+//			$( '#msgDialog' ).html( 'Are You Sure?' );
+//		}else{
+//			$( '#msgDialog' ).html( title );
+//		}
+//        $('#msgDialog' ).dialog( 'option', 'title', 'Confirm Action' );
+//        $('#msgDialog' ).dialog( {
+//			resizable: false,
+//			height:140,
+//			modal: true
+//		});
+//        $("#msgDialog").dialog('option', 'buttons', {
+//                "Confirm" : function() {
+//					$('body').removeClass('disable_scroll');
+//                    window.location.href = theHREF;
+//                    },
+//                "Cancel" : function() {
+//                    $('body').removeClass('disable_scroll');
+//					$(this).dialog("close");
+//                    }
+//                });
+
+//        $("#msgDialog").dialog("open");
+
+//    });
+	
+	//function confirm-auto start
+//	$( 'a.confirm-auto' ).click(function(e){
+//			e.preventDefault();
+//			$('body').addClass('disable_scroll');
+//			$(this).addClass('current_pick');
+//			
+//			var theHREF = $(this).attr("href");
+//			var title = $(this).attr("title");
+//			if(!title ){
+//				$( '#msgDialog > p' ).html( 'Are You Sure?' );
+//			}else{
+//				$( '#msgDialog > p' ).html( title );
+//			}
+//			$('#msgDialog' ).dialog( 'option', 'title', 'Confirm Action' );
+//			$('#msgDialog' ).dialog( {
+//				resizable: false,
+//				height:140,
+//				modal: true
+//			});
+//			
+//			$("#msgDialog").dialog('option', 'buttons', {
+//					"Confirm" : function() {
+//						$('body').removeClass('disable_scroll');
+//						$(this).dialog("close");
+//							$.ajax({
+//									type: 'POST',
+//									url: theHREF,
+//									data:{
+//										'jquery' : true
+//									},
+//									beforeSend: function() {
+//										$('body').addClass('disable_scroll');
+//										$('#loader').show();
+//									},
+//									 complete: function(){
+//										$('body').removeClass('disable_scroll');
+//										$('#loader').hide('slow');
+//									},
+//									success: function(msg){
+//										if(msg == 'true')
+//										{
+//											alert("Process was successfully Done");
+//											$('a.current_pick').parents('tr.profile_box').hide(2000);
+//										}else{
+//											alert("Process encountered an error");
+//										}
+//									},
+//									error: function (msg){
+//										alert("An error has occured");
+//									}
+//							});
+//						},
+//					"Cancel" : function() {
+//						$('body').removeClass('disable_scroll');
+//						$(this).dialog("close");
+//						}
+//			});
+
+//			$("#msgDialog").dialog("open");
+//    });
+	//function confirm-auto end
+	
+    
+    // --- Create Subject To Curriculum Record ---
+    $( '.subject_to_curriculum' ).click(function(){        
+            
+            $( '#ajaxLoadAni' ).fadeIn( 'slow' );
+            
+            var target = $(this).attr("id");
+            
+            $.ajax({
+                dataType : 'json',
+                url: baseurl + 'admin/create_subject_to_curriculum',
+                type: 'POST',
+                data: $( '#myform' + target ).serialize(),
+                
+                success: function( response ) {
+                    
+                        $( '#msgDialog > p' ).html( 'inserted' );
+                        $( '#msgDialog' ).dialog( 'option', 'title', 'Success' ).dialog( 'open' );
+                        $( '#ajaxLoadAni' ).fadeOut( 'slow' );
+                        
+                    
+                }
+
+            });
+            
+            return false;
+        
+    });
+	
+	// CHECK ALL CHECKBOXES
+	$('.check_all').click(function(){
+		
+		var id = $(this).attr('id');
+		
+		if($(this).is(':checked')){
+			$('.'+id).attr('checked', 'checked');
+		}
+		else if($(this).not(':checked')){
+			$('.'+id).removeAttr('checked');
+		}
+	});
+	
+	$('.time').timepicker({
+			timeFormat: 'h:mm'
+	});
+	
+	
+	
+});// --- end document ready ---

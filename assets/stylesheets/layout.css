@@ -1,0 +1,439 @@
+/* <!-- */
+	/* General styles */
+	table {margin:10px 0;}
+	#load {width:100px; height:100px; padding:50px; margin:0 auto;  background: url('../images/ajax_loading.gif') center center no-repeat;}
+	#error {width:95%; height:100px; padding:50px; margin:0 auto; color:red; font-size:18px; line-height:22px;  }
+	body {
+		font-family: Verdana, sans-serif;
+		margin:0;
+		padding:0;
+		border:0;			/* This removes the border around the viewport in old versions of IE */
+		width:100%;
+		background: #2e5dab url('../images/bg.png') top left repeat-x;
+		min-width:600px;		/* Minimum width of layout - remove line if not required */
+						/* The min-width property does not work in old versions of Internet Explorer */
+		font-size:12px;
+	}
+	.clear {clear:both;}
+	a {
+		color:#8fbf52;
+		padding:3px 0;
+		margin:5px 0;
+		margin-right:10px;
+		border-bottom:2px solid #fff;
+		font-weight:bold;
+		text-decoration:none;
+	}
+	a:hover {
+		text-decoration:underline;
+	}
+	p {
+		margin:.4em 0 .8em 0;
+		padding:0;
+	}
+	img {
+		margin:10px 0 5px;
+	}
+	/* Header styles */
+	#header {
+		clear:both;
+		float:left;
+		width:100%;
+	}
+	#header {
+	}
+	#header p,
+	#header h1,
+	#header h2 {
+		padding:.4em 15px 0 15px;
+		margin:0;
+	}
+	#header ul {
+		clear:left;
+		float:left;
+		width:100%;
+		list-style:none;
+		margin:20px 0 0 0;
+		padding:0;
+		height:50px;
+		padding:5px 0;
+	}
+	#header ul li {
+		display:inline;
+		list-style:none;
+		margin:0;
+		padding:0;
+	}
+	#header ul li span {width:50px; height:50px; display:inline-block; float:left;}
+	#header ul li a {
+		display:block;
+		float:left;
+		margin:0 0 0 0;
+		padding:0 10px;
+		text-align:center;
+		color:#000;
+		text-decoration:none;
+		position:relative;
+		left:15px;
+		line-height:1.3em;
+		font-weight:bold;
+	}
+	#header ul li span#dashboard {background:url('../images/dashboard.png') center left no-repeat; padding:0; margin:0; z-index:200;}
+	#header ul li span#student {background:url('../images/student.png') center left no-repeat; padding:0; margin:0; z-index:200;}
+	#header ul li span#employee {background:url('../images/employee.png') center left no-repeat; padding:0; margin:0; z-index:200;}
+	#header ul li span#finance {background:url('../images/finance.png') center left no-repeat; padding:0; margin:0; z-index:200;}
+	#header ul li span#time {background:url('../images/time.png') center left no-repeat; padding:0; margin:0; z-index:200;}
+	#header ul li span#record {background:url('../images/records.png') center left no-repeat; padding:0; margin:0; z-index:200;}
+
+	#header ul li a:hover {
+		background:#fff;
+	}
+	#header ul li a.active,
+	#header ul li a.active:hover {
+		color:#fff;
+		background:#000;
+		font-weight:bold;
+	}
+	#header ul li a span {
+		display:block;
+	}
+	/* 'widths' sub menu */
+	#layoutdims {
+		clear:both;
+		background:#eee;
+		border-top:4px solid #000;
+		margin:0;
+		padding:6px 15px !important;
+		text-align:right;
+	}
+	/* column container */
+	#filter {margin:5px 0; width:150px;}
+	#header #menu, #content {width:90%; margin:0 auto; padding:0;}
+	#header_top { margin:0 auto; padding:0;}
+	#content a, #content a:visited {-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+ 	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+ 	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+ 	border-bottom: 1px solid rgba(0,0,0,0.25);
+ 	background:#8fbf52; color:#fff; padding:3px 5px; margin:1px 3px; border:none; display:inline-block;}
+	#content a:hover {border:none; background:#b5d886;}
+	#content {margin-top:10px;background:#fff; padding:50px 19px 20px 19px; padding-bottom:150px; font-size:11px; line-height:16px; }
+	form p {padding:5px 10px; margin:3px 0;}
+	input[type=submit] {color:#fff; font-weight:bold;margin:0; padding:4px 8px; background:url('../images/submit.png') center left repeat-x; border:1px solid #77AE02;}
+	input[type=submit]:hover {color:#fff; font-weight:bold;margin:0; padding:4px 8px; background:url('../images/submit_hover.png') center left repeat-x; border:1px solid #77AE02;}
+	input[type='text'], input[type='password'] {border:1px solid #ccc; border-top:2px solid #A9A9A9; padding:5px 8px;}
+	#content h1 {font-size:24px; margin:10px 0; letter-spacing: -2px; padding:0; color:#A9A9A9; }
+
+	/* Table */
+	#table {border:1px solid #A4D1FF; border-collapse:collapse; width:100%;-moz-box-shadow: 0 0 2px 2px #ccc;
+-webkit-box-shadow: 0 0 2px 2px#ccc;
+box-shadow: 0 0 2px 2px #ccc;}
+	#table td {padding:3px 5px; border-left:1px solid #A4D1FF; border-bottom:1px solid #A4D1FF;}
+	#table tr.on {background:#A4D1FF;}
+	#table tr.even td {background:#def;}
+	#table tr.odd td {background:#fff;}
+	#table th {background:#A4D1FF;border-left:1px solid #def; border-bottom:1px solid #A4D1FF;font-weight:bold; padding:3px 5px; text-align:left;}
+	#table td a {border:none; }
+	#table td a:hover {text-decoration:underline;}
+	#table p {padding:0; margin:0; line-height:12px;}
+	.colmask {
+		position:relative;	/* This fixes the IE7 overflow hidden bug */
+		clear:both;
+		float:left;
+		width:100%;			/* width of whole page */
+		overflow:hidden;		/* This chops off any overhanging divs */
+	}
+	/* common column settings */
+	.colright,
+	.colmid,
+	.colleft {
+		float:left;
+		width:100%;
+		position:relative;
+	}
+	.col1,
+	.col2,
+	.col3 {
+		float:left;
+		position:relative;
+		padding:0 0 1em 0;
+		overflow:hidden;
+	}
+	/* Full page settings */
+	.fullpage {
+				/* page background colour */
+	}
+	.fullpage .col1 {
+		width:96%;			/* page width minus left and right padding */
+		left:2%;			/* page left padding */
+	}
+	/* Footer styles */
+	#footer {
+		clear:both;
+		float:left;
+		width:100%;
+		margin-top:10px;
+	}
+	#footer p {
+		border-top:1px solid #ccc;
+		background:#fff;
+		width:88%;
+		text-align:center;
+		margin:0 auto;
+		padding:10px;
+		font-size:10px;
+		font-weight:bold;
+	}
+	/* --> */
+	select {padding:5px; height:30px; border:2px solid #ccc;}
+	label { font-style:normal; text-align:right; margin:5px 3px;  font-size:12px; }
+	p {margin:5px 0;}
+	span.timeselect {margin:5px 10px 5px 0; display:inline-block;}
+	span.label-short {width:150px; text-align:right; margin:5px 10px; display:inline-block;}
+	div.header-title {text-align:center; padding:10px 0; font-size:20px; color:#fff; background:#4B7399;}
+
+/* User Links */
+#user_link {background:#fff; padding:10px 5px ; margin:0; width:60%;float:right; -moz-box-shadow: 0 0 2px 2px #ccc;
+-webkit-box-shadow: 0 0 2px 2px#ccc;
+box-shadow: 0 0 2px 2px #ccc;}
+#user_link a {border:none;}
+#user_link span {border-left:1px solid #ccc;  padding:5px; margin:0 5px;}
+#announcement_board {float:right; width:50%; margin-top:5px; padding:0 5px; background:#fff; -moz-box-shadow: 0 0 2px 2px #ccc;
+-webkit-box-shadow: 0 0 2px 2px#ccc;
+box-shadow: 0 0 2px 2px #ccc;}
+#announcement_board li p {font-size:12px; line-height:16px; height:50px; width:100%; }
+#announcement_board li p a {border:none; padding:0; margin:0; color:#369; background:none; font-weight:normal;}
+#announcement_board li p a:hover {background:none; text-decoration:underline;}
+#announcement_board li p em {text-align:right; position:absolute; bottom:0; right:15px;}
+#announcement_show p em {text-align:right; position:absolute; bottom:0; right:15px;}
+#header ul li .active {background:#fff; border:1px solid #000; border-bottom:1px solid #fff;}
+
+input[type=text],  input[type=password], input[type=textarea] {padding:5px 2px;}
+.clear {clear:both;}
+.boxed {float:left; border:1px solid #000; border: 1px solid #ccc; padding:10px; margin:5px 5px;}
+.error_form {border:1px solid #FF0000; background:#FFC1C1; }
+.error_text {color:#FF0000; font-size:80%;}
+
+.strip_1 {background:#C6E2FF; }
+.strip_2 {background:#fff; }
+
+/* student data show*/
+#record_list {margin:10px 0; width:50%; color:#369;}
+#record_list1 {margin:10px 0; width:80%; color:#369;}
+#record_list2 {margin:10px 0; width:95%; color:#369;}
+#record_list ul,#record_list1 ul,#record_list2 ul {list-style:none;}
+#record_list ul li,#record_list1 ul li,#record_list2 ul li {list-style:none; border-bottom:1px solid #ccc; padding:15px 0 0 5px; }
+#std1, #std2 {float:left; width:45%; padding:5px 10px;}
+#subjects ul {list-style:none;}
+#subject ul ul {list-style:none;}
+#subject ul ul {margin:5px 10px; border-left:2px solid #ccc; padding:3px 5px;}
+div.label {padding:3px 5px; width:150px; display:inline-block; text-align:left;}
+
+/* Student data Form*/
+div #std1 p label { text-align:left; margin:5px 10px; display:block;}
+div #std2 p label { text-align:left; margin:5px 10px; display:block;}
+div #std3 p label {width:100px; text-align:right; margin:5px 10px; display:inline-block;}
+span.label {width:100px; text-align:right; margin:5px 10px; display:inline-block;}
+#std1, #std2 {float:left; width:45%; padding:5px 10px;}
+.pager .first{width:23px; height:23; cursor:pointer;margin:1px; display:inline-block; background:url('../images/start.png') center left no-repeat; }
+.pager .last {width:23px; height:23; cursor:pointer;margin:1px; display:inline-block; background:url('../images/end.png') center left no-repeat; }
+.pager .prev {width:23px; height:23; cursor:pointer;margin:1px; display:inline-block; background:url('../images/left.png') center left no-repeat; }
+.pager .next {width:23px; height:23; cursor:pointer;margin:1px; display:inline-block; background:url('../images/right.png') center left no-repeat; }
+.pager {display:inline-block; }
+a.close {border:none;}
+a.close:hover {border:none;}
+#employee_payslip a {color:369;}
+#facebox a {color:#8fbf52;}
+#facebox #header, #facebox #sub_header, #home_header {display:block;padding:5px; color:#369; font-size:18px; margin-bottom:5px; border-bottom:1px solid #369;}
+
+#flash_notice, #flash_error {
+  padding: 13px 15px;
+  margin: 10px 0;
+  font-weight:bold;
+}
+
+#flash_notice {
+  padding-left:50px;
+  background: #CFC url('../images/ok.png') center left no-repeat ;
+  border: solid 1px #6C6;
+}
+
+#flash_error {
+  padding-left:50px;
+  background-color: #ff9b9b url('../images/error.png') center left no-repeat ;
+  border: solid 1px #C66;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 8px;
+}
+
+#errorExplanation ul {
+  margin: 2px 24px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: disc;
+}
+
+/* Calendar */
+#calendar table {
+  border-collapse: collapse;
+  width: 100%;
+  color:#000;
+}
+
+#calendar td,
+#calendar th {
+  font-family: "Lucida Grande",arial,helvetica,sans-serif;
+  font-size: 10px;
+  padding: 6px;
+  border: 1px solid #999;
+}
+
+#calendar th {
+  background: #DDD;
+  color: #666;
+  text-align: center;
+  width: 14.2857142857143%;
+}
+
+#calendar td {
+  background: #FFF;
+  color: #777;
+  height: 80px;
+  vertical-align: top;
+  font-size: 16px;
+}
+
+#calendar td:hover {
+	background:#edf7fc;
+}
+
+
+
+#calendar .notmonth {
+  color: #CCC;
+}
+
+#calendar #month {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+
+#calendar table a, #calendar table a:hover {
+border:none;
+background:none;
+width:50%;
+margin:0;
+display:block;
+color:#000;
+}
+
+#calendar .today {
+  background-color: #D7F2FF;
+}
+
+#calendar ul {
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
+  list-style: none;
+}
+
+#calendar li {
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  text-align: center;
+}
+
+/* Course Finance */
+.coursefees p {width:40%; float:left; display:block; }
+#index_fee .span1{width:250px; display:inline-block;}
+#index_fee .span2{width:25px; display:inline-block;}
+#index_fee .span3{width:150px; display:inline-block;}
+#index_fee .span4{width:25px; display:inline-block;}
+
+/*Student Home*/
+#box1 {width:40%; float:left; margin-right:20px;}
+#box2 {width:55%; float:left; margin-right:20px;}
+#parent1, #parent2 {width:100%; margin-bottom:10px;}
+#parent3, #parent4 {width:100%; margin-bottom:10px;}
+
+/* Slider */
+.slider_buttons {padding:5px 10px; font-size:18px; background:#8fbf52; color:#fff; margin:3px auto; width:90%; }
+.slider_content {padding:5px 10px; border-left:1px solid #ccc; border-right:1px solid #ccc;}
+
+/* Student Search */
+#list {list-style:none; float:left; width:30%; margin-right:20px; }
+.student_search {padding:5px 10px; margin:10px 5px 10px 0; -moz-box-shadow: 0 0 2px 2px #ccc;
+	-webkit-box-shadow: 0 0 2px 2px#ccc;
+box-shadow: 0 0 2px 2px #ccc;  }
+/* Opera */
+.student_search{background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjpyZ2JhKDIyNiwyNDcsMjAwLDEpOyIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOnJnYmEoMjU1LDI1NSwyNTUsMSk7IiAvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IGZpbGw9InVybCgjZ3JhZGllbnQpIiBoZWlnaHQ9IjEwMCUiIHdpZHRoPSIxMDAlIiAvPjwvc3ZnPg==);}
+
+/* Firefox */
+.student_search{background: -moz-linear-gradient( top, rgba(226,247,200,1), rgba(255,255,255,1) );}
+
+/* Chrome & Safari */
+.student_search{background: -webkit-gradient( linear, left top, left bottom, color-stop( 0, rgba(226,247,200,1) ), color-stop( 1, rgba(255,255,255,1) ) );}
+
+/* IE5.5 - IE7 */
+.student_search{filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#FFE2F7C8,EndColorStr=#FFFFFFFF);}
+
+/* IE8 */
+.student_search{-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#FFE2F7C8,EndColorStr=#FFFFFFFF)";}
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header{ margin-bottom: 8px; }
+.ui-timepicker-div dl{ text-align: left; }
+.ui-timepicker-div dl dt{ height: 25px; }
+.ui-timepicker-div dl dd{ margin: -25px 0 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+
+/* Login */
+#select_login_div {width:95%; margin:0 auto; text-align:center;}
+.select_login {margin-bottom:10px;}
+#userlogin {width:50%; margin:0 auto; }
+
+  #sortable { list-style-type: none; margin: 0; padding: 0; width: 100%; }
+  #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+  #sortable li span { position: absolute; margin-left: -1.3em;
+.clear {clear:both;}
+.boxed { border:1px solid #000; border: 1px solid #ccc; padding:10px; margin:5px 5px;}
+.boxed1 { border:1px solid #000; border: 1px solid #ccc; padding:10px; margin:5px 5px;}
+.boxed2 { border:1px solid #000; border: 1px solid #ccc; padding:10px; margin:5px 5px;}
+.boxed3 { border:1px solid #000; border: 1px solid #ccc; padding:10px; margin:5px 5px;}
+.boxed4 { border:1px solid #000; border: 1px solid #ccc; padding:10px; margin:5px 5px;}
+
+
+/* Notices */
+p#inform {font-size:12px; line-height:16px; padding:5px 10px; margin:5px 0; background:#ffe300; border: 1px solid #ff9c00; }

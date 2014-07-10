@@ -1,0 +1,120 @@
+/* for table data*/
+.tabular tr td{padding:5px 10px;border:2px solid transparent;}
+.tabular-head th{padding:5px 10px;background:#6F9BDC;color:#fff;}
+.tabular tr:nth-child(odd){background:#c0c0c0}
+.tabular tr:nth-child(even){background:#eee} 
+.tabular tr:hover{background:#B3CAEC}
+.tabular tr.total td{border:2px solid #000;}
+
+/* link */
+
+.edt {display:bloxk; border:1px solid #B3CAEC;background:#608FD7;color:#fff;padding:2px 8px;}
+.edt:hover {background:#5BDB65;color:#000;border:1px solid #000;}
+
+.del {display:bloxk; border:1px solid #B3CAEC;background:#FF3737;color:#fff;padding:2px 8px;}
+.del:hover {background:#5BDB65;color:#000;border:1px solid #000;}
+
+.add {display:bloxk; border:1px solid #B3CAEC;background:#16A20F;color:#fff;padding:2px 8px;}
+.add:hover {background:#5BDB65;color:#000;border:1px solid #000;}
+
+div.pagnate-links{ text-align:center;height:30px;}
+div.pagnate-links a { border:1px solid #c0c0c0;padding:5px 10px; background:#eee;}
+div.pagnate-links a:hover { border:1px solid #c0c0c0;padding:5px 10px; background:#f00;color:$fff;}
+
+div.pagnate-links b{ border:1px solid #c0c0c0;padding:5px 10px; background:#000; color:#fff;}
+
+.data-table{border-spacing:0px;width:100%;}
+
+div.verify{
+	position:absolute; 
+	z-index:99999;
+	width:100%;
+	height:100%;
+	background:rgba(10,10,10,0.8);
+}
+
+div.wrapper{
+	position:relative;
+	margin:15px 15px;
+	border:1px solid #f00;
+	background:#c0c0c0;
+	width:500px;
+	height:600px;
+	margin:10px auto 0 auto;
+}
+div.content{
+
+	padding:5px;
+}
+div.wrapper img{margin:0 42%;}
+span.form_error{
+	font-size:10px;
+	font-wieight:bold;
+	color:#f00;
+}
+
+div.enrollment_content_successful{
+	border:1px solid #000;
+	width:500px;
+	margin:10px 0 10px 30px;
+	padding:5px;
+	background:#c0c0c0;
+}
+div.enrollment_content_successful p{
+	display:block;
+	margin:4px 4px;
+	font-weight:bold;
+	font-size:14px;
+}
+
+div.menu{
+position:absolute;
+bottom:5px;
+}
+div.menu input[type=submit]{
+	display:block; border:1px solid #B3CAEC;background:#16A20F;color:#fff;padding:2px 8px;
+}
+
+
+div#enrollment div:first-child{ border-radius:15px 15px 0 0; }
+div#enrollment div:last-child{ border-radius:0 0 15px 15px; }
+div#enrollment div#option:hover{ background:#5BDB65; }
+
+div#enrollment div#option{
+	border:1px solid #0F600F;
+	width:400px;
+	height:50px;
+	line-height:50px;
+	margin:2px 0;
+	background:#90EE90;
+}
+
+div.enrollee-profile{padding:4px 10px;}
+div.enrollee-profile div.input-block{padding:4px 5px;}
+div.enrollee-profile div{background:#E8EDFF;}
+div.enrollee-profile div:hover{background:#B0C2FF;}
+div.input-block input[type=text].profile-data{
+		width:488px;
+		padding:2px 4px;
+		border:2px solid #c0c0c0;
+}
+h1.student-name{font-wieight:bold; font-size:18px;}
+
+.subj-ass-fieldset, fieldset {padding:5px;margin:10px;}
+h2.strong {font-weight:bold; margin:5px;}
+
+td.action a {display:block; margin:5px 0px;}
+
+
+table.blue {width:100%; margin:0;  border-collapse:collapse;}
+table.blue tbody tr th { font-size: 11px; font-weight: normal; padding: 5px 10px; background: #B9C9FE; border: 1px solid #AABCFE; color: #039; }
+table.blue tbody tr td { tablmargin:0;padding: 5px 10px; background: #E8EDFF; border: 1px solid #AABCFE; color: black; font-size: 10px; }
+table.blue tbody tr:hover td { background: #D0DAFD; color: black; }
+table.blue tbody tr td label {display:block; margin:5px 0;}
+
+a.data-link {color:#2E66BA;font-weight:bold;}
+a.data-link:hover {text-decoration:underline;}
+
+h1.student_name {display:block; text-align:center; pargin:10px; font-size:1.8em; line-height:1.8em; font-weight:bold;}
+h3.student {font-weight:bold; display:block; text-align:center; font-size:1em; line-height:1em; margin:5px;}
+

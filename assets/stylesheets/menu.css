@@ -1,0 +1,94 @@
+/* ================================================================ 
+This copyright notice must be untouched at all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menus/dd_valid.html
+Copyright (c) 2005-2007 Stu Nicholls. All rights reserved.
+This stylesheet and the assocaited (x)html may be modified in any 
+way to fit your requirements.
+=================================================================== */
+/* common styling */
+#action_links3 {font-family: arial, sans-serif;  display:inline; font-size:11px; z-index:50; margin:0; letter-spacing:0;}
+#action_links3 ul li a, #action_links3 ul li a:visited {margin:0; background:#A4D1FF; margin-right:1px;display:inline; text-decoration:none; color:#fff; padding:5px; text-align:center;  line-height:20px; font-size:12px; overflow:hidden;}
+#action_links3 ul {padding:0; margin:0; list-style: none; background:none;}
+#action_links3 ul li {float:left; position:relative; background:none; margin:0; padding:0;}
+#action_links3 ul li ul {display: none;}
+/* specific to non IE browsers */
+
+#action_links3 a {border:none; margin:0;}
+#action_links3 ul li:hover a {color:#fff;background:#8bbb4e; }
+#action_links3 ul li:hover ul {display:block; position:absolute; top:-50px; left:50px; width:200px; }
+#action_links3 ul li:hover ul li a.hide { color:#fff;}
+#action_links3 ul li:hover ul li:hover a.hide { color:#000;}
+#action_links3 ul li:hover ul li ul {display: none;}
+#action_links3 ul li:hover ul li:first-child {border-top:none;}
+#action_links3 ul li:hover ul li:last-child {border-bottom:none;}
+#action_links3 ul li:hover ul li a {margin-top:1px; display:block; background:#A4D1FF; color:#fff; width:200px; }
+#action_links3 ul li:hover ul li a:hover {background:#8bbb4e; color:#fff;}
+#action_links3 ul li:hover ul li:hover ul {display:block; position:absolute; left:200px; top:0;}
+#action_links3 ul li:hover ul li:hover ul.left {left:0px;}
+#action_links3 ul li#first {background:none;}
+
+#action_links {font-family: arial, sans-serif; position:relative; font-size:11px; z-index:50; margin:0; letter-spacing:0;}
+#action_links ul li a, #action_links ul li a:visited {margin:0; background:#A4D1FF; margin-right:1px;display:inline-block; text-decoration:none; color:#fff; padding:5px; text-align:center;  line-height:20px; font-size:12px; overflow:hidden;}
+#action_links ul {padding:0; margin:0; list-style: none; background:none;}
+#action_links ul li {float:left; position:relative; background:none; margin:0; padding:0;}
+#action_links ul li ul {display: none;}
+/* specific to non IE browsers */
+
+#action_links2 {font-family: arial, sans-serif; position:relative; font-size:11px; z-index:10; margin:0; letter-spacing:0;}
+#action_links2 ul li a, #action_links2 ul li a:visited {margin:0; background:#A4D1FF; margin-right:1px;display:inline-block; text-decoration:none; color:#fff; padding:5px; text-align:center;  line-height:20px; font-size:12px; overflow:hidden;}
+#action_links2 ul {padding:0; margin:0; list-style: none; background:none;}
+#action_links2 ul li {float:left; position:relative; background:none; margin:0; padding:0;}
+#action_links2 ul li ul {display: none;}
+/* specific to non IE browsers */
+
+#action_links2 a {border:none; margin:0;}
+#action_links2 ul li:hover a {color:#fff;background:#8bbb4e; }
+#action_links2 ul li:hover ul {display:block; position:absolute; top:0px; left:48px; width:200px; }
+#action_links2 ul li:hover ul li a.hide { color:#fff;}
+#action_links2 ul li:hover ul li:hover a.hide { color:#000;}
+#action_links2 ul li:hover ul li ul {display: none;}
+#action_links2 ul li:hover ul li:first-child {border-top:none;}
+#action_links2 ul li:hover ul li:last-child {border-bottom:none;}
+#action_links2 ul li:hover ul li a {margin-top:1px; display:block; background:#A4D1FF; color:#fff; width:200px; }
+#action_links2 ul li:hover ul li a:hover {background:#8bbb4e; color:#fff;}
+#action_links2 ul li:hover ul li:hover ul {display:block; position:absolute; left:200px; top:0;}
+#action_links2 ul li:hover ul li:hover ul.left {left:0px;}
+#action_links2 ul li#first {background:none;}
+
+#action_links a {border:none; margin:0;}
+#action_links ul li:hover a {color:#fff;background:#8bbb4e; }
+#action_links ul li:hover ul {display:block; position:absolute; top:0; left:-210px; width:200px; }
+#action_links ul li:hover ul li a.hide { color:#fff;}
+#action_links ul li:hover ul li:hover a.hide { color:#000;}
+#action_links ul li:hover ul li ul {display: none;}
+#action_links ul li:hover ul li:first-child {border-top:none;}
+#action_links ul li:hover ul li:last-child {border-bottom:none;}
+#action_links ul li:hover ul li a {margin-top:1px; display:block; background:#A4D1FF; color:#fff; width:200px; }
+#action_links ul li:hover ul li a:hover {background:#8bbb4e; color:#fff;}
+#action_links ul li:hover ul li:hover ul {display:block; position:absolute; left:200px; top:0;}
+#action_links ul li:hover ul li:hover ul.left {left:0px;}
+#action_links ul li#first {background:none;}
+
+#menu_links {width:45%;float:left; font-family: arial, sans-serif; position:relative; font-size:11px; z-index:50; margin-top:10px; letter-spacing:0;}
+#menu_links ul li a, #menu_links ul li a:visited { background:#fff; margin-right:1px;display:block; text-decoration:none; color:#000; padding:5px; text-align:center;  line-height:20px; font-size:12px; overflow:hidden;}
+#menu_links ul {padding:0; margin:0; list-style: none; background:none;}
+#menu_links ul li {float:left; position:relative; background:none;}
+#menu_links ul li ul {display: none;}
+/* specific to non IE browsers */
+
+#menu_links a {border:none;}
+#menu_links ul li:hover a {color:#fff;background:#A4D1FF; }
+#menu_links ul li:hover ul {display:block; position:absolute; top:60px; left:0; width:200px; z-index:50;}
+#menu_links ul li:hover ul li a.hide { color:#fff;}
+#menu_links ul li:hover ul li:hover a.hide { color:#000;}
+#menu_links ul li:hover ul li ul {display: none; }
+#menu_links ul li:hover ul li:first-child {border-top:none;}
+#menu_links ul li:hover ul li:last-child {border-bottom:none;}
+#menu_links ul li:hover ul li a {text-shadow: 0 -1px 1px rgba(0,0,0,0.25); display:block; background:#A4D1FF; color:#fff; width:200px; }
+#menu_links ul li:hover ul li a:hover {background:#59a9f9; color:#fff;}
+#menu_links ul li:hover ul li:hover ul {display:block; position:absolute; left:200px; top:0;}
+#menu_links ul li:hover ul li:hover ul.left {left:0px;}
+#menu_links ul li#first {background:none;}
+

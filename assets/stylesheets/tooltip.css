@@ -1,0 +1,36 @@
+.SimpleTip{
+    position:relative;  
+    color:blue;
+}
+.SimpleTip span{
+    /* hide tool tip box */
+    display: none; 
+}
+ 
+.SimpleTipHover{
+    position:relative; 
+    color:#069;
+    cursor: help;  /* show help icon along with regular mouse icon */
+}
+/* style the tool tip */
+.SimpleTipHover span{ 
+    /* you can change anything in the styling attributes below */
+    font-size: 12px; 
+    font-weight: normal; 
+    width:250px; 
+    padding:4px;   
+    border:2px solid #FFC568; 
+    background-color:#FFF9E4; 
+    color:#555;
+    /* DON'T CHANGE ANYTHING BEYOND THIS LINE */
+    /* making round corners for Moziall Firefox and Safari. IE dosen't support */
+    -moz-border-radius: 3px; 
+    -webkit-border-radius: 3px; 
+    position:absolute; 
+    display:block; 
+    left:0px; /* correct positioning*/
+    top:auto; /* adjust positioning from top so that tool tip will come above the elemnt */
+    text-align: left;  
+    /* make it visible above the all elment, z-index decide the order of elements we show on page. 5000 is much higher value and tool tip will always come above of all elements */
+    z-index:5000;
+}

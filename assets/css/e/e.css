@@ -1,0 +1,306 @@
+.result-waiting {display:inline;}
+#result1, #result2, #result3, #result4, #result5, #result6, #result7, #result8, #result9, #result10 {display:inline;}
+.result-success {float:left; width:1000px;  }
+.result-success table {padding:0; margin:0; background:#64B910; padding:0;color:#fff; border:1px solid #4e9a06; border-collapse:collapse;}
+.result-success td {border:1px solid #4e9a06;font-weight:bold;}
+.full_subject {background:#cc0000; border:2px solid #ef2929;}
+.subject_sc_id_input{width:150px; float:left; margin:5px 0 0 0;}
+.result-error {display:inline; background:#cc0000; padding:5px 10px; color:#fff; font-weight:bold;}
+.error {color:red; font-weight:bold; font-size:11px; border:1px solid #a40000;}
+.error-field { border:2px solid #ef2929;}
+input.error-field { border:2px solid #ef2929;}
+.not_blank.error-field { border:2px solid #ef2929;}
+.hasDatepicker.error-field { border:2px solid #ef2929;}
+/* <!-- */
+	/* General styles */
+	div #std1 p label {width:100px; text-align:right; margin:5px 10px; display:inline-block;}
+	div #std2 p label {width:150px; text-align:right; margin:5px 10px; display:inline-block;}
+	div #std3 p label {width:100px; text-align:right; margin:5px 10px; display:inline-block;}
+	span.label {width:100px; text-align:right; margin:5px 10px; display:inline-block;}
+	#std1{float:left; width:400px; padding:5px 0; }
+	#std2{float:right; width:480px; padding:5px 0; }
+
+
+	div #std3 #label_of_acad_history #label1 {width:100px; display:inline-block; margin-right:15px;}
+	#hidden_degree{border:1px solid #fff;}
+	div #std3 #label_of_acad_history label  {width:250px; display:inline-block;  text-align:center; margin:3px;}
+
+	#enrollment_required_info {width:300px; background-color: #FEFF66; border: solid 1px #FEFF19; padding:10px 20px; }
+	#enrollment_required_info span{color:red;}
+	span.req{color:red;}
+	body {
+		margin:0;
+		padding:0;
+		border:0;			/* This removes the border around the viewport in old versions of IE */
+		width:100%;
+		font-family: arial, sans-serif;
+
+
+		background: #D1E6FF top left repeat;
+		min-width:600px;		/* Minimum width of layout - remove line if not required */
+						/* The min-width property does not work in old versions of Internet Explorer */
+		font-size:90%;
+	}
+	a {
+		color:#369;
+	}
+	a:hover {
+		color:#fff;
+		background:#369;
+		text-decoration:none;
+	}
+	h1, h2, h3 {
+		margin:.8em 0 .2em 0;
+		padding:0;
+	}
+	p {
+		margin:.4em 0 .8em 0;
+		padding:0;
+	}
+	img {
+		margin:10px 0 5px;
+	}
+	/* Header styles */
+	#header {
+		clear:both;
+		float:left;
+		width:100%;
+	}
+	#header {
+		border-bottom:1px solid #000;
+	}
+	#header p,
+	#header h1,
+	#header h2 {
+		padding:.4em 15px 0 15px;
+		margin:0;
+	}
+	#header ul {
+		clear:left;
+		float:left;
+		width:100%;
+		list-style:none;
+		margin:10px 0 0 0;
+		padding:0;
+	}
+	#header ul li {
+		display:inline;
+		list-style:none;
+		margin:0;
+		padding:0;
+	}
+	#header ul li a {
+		display:block;
+		float:left;
+		margin:0 0 0 1px;
+		padding:3px 10px;
+		text-align:center;
+		background:#eee;
+		color:#000;
+		text-decoration:none;
+		position:relative;
+		left:15px;
+		line-height:1.3em;
+	}
+	#header ul li a:hover {
+		background:#369;
+		color:#fff;
+	}
+	#header ul li a.active,
+	#header ul li a.active:hover {
+		color:#fff;
+		background:#000;
+		font-weight:bold;
+	}
+	#header ul li a span {
+		display:block;
+	}
+	/* 'widths' sub menu */
+	#layoutdims {
+		clear:both;
+		background:#eee;
+		border-top:4px solid #000;
+		margin:0;
+		padding:6px 15px !important;
+		text-align:right;
+	}
+	/* column container */
+	.colmask {
+		position:relative;	/* This fixes the IE7 overflow hidden bug */
+		clear:both;
+		float:left;
+		width:100%;			/* width of whole page */
+		overflow:hidden;		/* This chops off any overhanging divs */
+	}
+	/* common column settings */
+	.colright,
+	.colmid,
+	.colleft {
+		float:left;
+		width:100%;
+		position:relative;
+	}
+	.col1,
+	.col2,
+	.col3 {
+		float:left;
+		position:relative;
+		padding:0 0 1em 0;
+		overflow:hidden;
+	}
+	/* Full page settings */
+	.fullpage {
+			/* page background colour */
+	}
+	.fullpage .col1 {
+		width:96%;			/* page width minus left and right padding */
+		left:2%;			/* page left padding */
+	}
+	/* Footer styles */
+	#footer {
+		clear:both;
+		float:left;
+		width:100%;
+	}
+	#footer p {
+		padding:10px;
+		margin:0;
+	}
+	/* --> */
+
+#flash_notice, #flash_error {
+  padding: 8px 12px;
+  margin: 10px 0;
+  font-size:14px;
+}
+
+#flash_notice {
+  background-color: #FEFF66;
+  border: solid 1px #FEFF19;
+}
+
+#flash_error {
+  background-color: #FCC;
+  border: solid 1px #C66;
+  font-size:14px;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 8px;
+}
+
+#errorExplanation ul {
+  margin: 2px 24px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: disc;
+}
+
+input[type=text],  input[type=password], input[type=textarea] {padding:5px 2px; border:2px solid #ccc;}
+input[type=select] {padding:5px 10px; height:50px; font-weight:normal;}
+.submit{background:#5fbf00; border:1px solid #5fbf00; padding:5px; color:#fff; cursor:pointer;}
+span.padded {padding:1px; border:1px solid #5fbf00; background:#fff;}
+.clear {clear:both; height:0; width:0; margin:0; padding:0;}
+.boxed {float:left; border:1px solid #000; border: 1px solid #ccc; padding:10px; margin:5px 5px;}
+.boxed1 {float:left; border:1px solid #000; border: 1px solid #ccc; padding:10px; margin:5px 5px;}
+.boxed2 {float:left; border:1px solid #000; border: 1px solid #ccc; padding:10px; margin:5px 5px;}
+.boxed3 {float:left; border:1px solid #000; border: 1px solid #ccc; padding:10px; margin:5px 5px;}
+.boxed4 { border:1px solid #000; border: 1px solid #ccc; padding:10px; margin:5px 5px;}
+.error_form {border:1px solid #FF0000; background:#FFC1C1; }
+.error_text {color:#FF0000; font-size:80%; display:inline-block;}
+#enroll1 {border:1px solid #ccc; background:#fff; padding:10px 20px; margin:0 auto;}
+#enroll2 {border:1px solid #ccc; background:#fff; padding:10px 20px; margin:0 auto;}
+#head2  {border:1px solid #ccc; background:#fff; padding:10px 20px; margin:10px auto; width:80%; text-align:center;}
+#head3  {border:1px solid #ccc; background:#ffff5f; padding:10px 20px; margin:10px auto; width:80%; text-align:left;}
+
+
+
+body
+{
+	line-height: 1.6em;
+}
+
+#hor-minimalist-a
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	background: #fff;
+	margin: 5px 0 ;
+	width: 900px;
+	border-collapse: collapse;
+	text-align: left;
+}
+#hor-minimalist-a th
+{
+	font-size: 14px;
+	font-weight: normal;
+	color: #039;
+	padding: 10px 8px;
+	border-bottom: 2px solid #6678b1;
+}
+#hor-minimalist-a td
+{
+	color: #669;
+	padding: 9px 8px 0px 8px;
+}
+#hor-minimalist-a tbody tr:hover td
+{
+	color: #009;
+}
+
+#hor-minimalist-a td .full
+{
+	color: #bfbfbf;
+	padding: 9px 8px 0px 8px;
+}
+#hor-minimalist-a tbody tr:hover td .full
+
+{
+	color: #7f7f7f;
+}
+
+
+/*New Enrollment Layout*/
+
+.f1 div {width:99%;}
+.f2 div {width:49%; float:left;}
+.f3 div {width:33.32%; float:left;}
+.f4 div {width:24%; float:left;}
+.f5 div {width:19%; float:left;}
+.f1 div, .f2 div, .f3 div, .f4 div, .f5 div {float:left;margin:10px 0;}
+
+p #warn {color:darkred; font-size:10px;}
+strong#small {font-size:11px;}
+
+
+span.error {
+	padding:2px 3px;
+	border:none;
+}

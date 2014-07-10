@@ -1,0 +1,218 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section 
+{
+	display: block;
+}
+
+body
+{
+    background-color: #4B7399;
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 12px;
+}
+
+a
+{
+    color: #000;
+    text-decoration: none;
+}
+
+ul
+{
+    list-style: none;
+}
+
+.span
+{
+    line-height: 1.5;
+    padding: 5px;
+}
+
+.captionHeader{
+    border:1px solid #ccc; 
+    background:#fff; 
+    padding:10px 20px; 
+    margin:10px auto; 
+    width:80%; 
+    text-align:center;
+}
+
+.contentContainer{
+    border:1px solid #ccc; 
+    background:#fff; 
+    padding:10px 20px; 
+    margin:10px auto; 
+    width:90%; 
+}
+
+.contentInput{
+    float: left;
+    line-height: 2;
+}
+
+.clearfloat
+{
+    clear: both;
+    font-size: 0px;
+    line-height: 0;
+    height: 0px;
+}
+
+div#wrapper
+{
+    width: 100%;
+    margin: 0px auto;
+}
+
+.submit
+{
+    background: #5fbf00; 
+    border: 1px solid #5fbf00; 
+    padding: 5px; 
+    color: #fff; 
+    cursor: pointer;
+}
+
+div.spacer
+{
+    font-size: 0px;
+    line-height: 0;
+    height: 10px;
+}
+
+.side_menu
+{
+    background-color: #6f9bdc;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0px;
+    border:1px  solid #286bcc;
+    border-bottom:none;
+    cursor:pointer;   
+}
+
+.accordion h3.head a
+{
+    color: #fff;
+    display: inline;
+    position: relative;
+}
+
+.accordion div
+{
+    border-left:1px  solid #286bcc;
+    border-right:1px  solid #286bcc;
+}
+
+.accordion div.head2
+{
+    border-top:1px  solid #286bcc;
+    border-left:1px  solid #286bcc;
+    border-right:1px  solid #286bcc;
+}
+
+.accordion div p a
+{
+    color: #6f9bdc;
+    display: inline;
+    position: relative;
+    padding: 5px;
+    line-height: 1.5;
+}
+
+.accordion h3.head2 a
+{
+    color: #fff;
+    display: inline;
+    position: relative;
+}
+
+
+/********
+* @ajax load
+********/
+#ajaxLoadAni {
+    background: #3A3A3A;
+    color: #fff;
+    display: none;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 40%;
+    padding: 8px;
+    width: 106px;
+    z-index: 9999;
+}
+
+#ajaxLoadAni span {
+    float: right;
+    margin: 2px 0 0 0;
+}
+
+/******
+Student Profile
+******/
+.profile_top 
+{
+    margin: 10px 20px;
+    padding:10px 20px;
+    border:1px solid #487c9c;
+    background:#8ab8df;
+}
+
+.active_tab_menu
+{
+    background-color: #6f9bdc;
+    color: #fff;
+    text-align: center;
+    border:1px solid #286bcc;
+    border-bottom: none;
+    cursor:pointer;   
+}
+
+.inactive_tab_menu
+{
+    color: #286bcc;
+    text-align: center;
+    border:1px solid #ccc;
+    border-bottom: none;
+    cursor:pointer;   
+}
+
+/*******
+Form Styling
+*******/
+.admin-form {padding:10px;}
+.admin-form .hidden {display:none;}
+.admin-form fieldset {padding:5px; margin:10px 0;}
+.admin-form input[type="submit"][disabled]{background:#555; color:#999; text-shadow:none; border:1px solid #888;}
+.input-block {display:block; width:100%; padding:5px 0;}
+.input-block label {display:block; width:150px; float:left; line-height:26px; margin-right:20px;}
+.input-block input[type="text"], .input-block input[type="password"], .input-block select {width:300px; padding:3px;margin-right:10px;}
+.input-block span {line-height:26px;}
+fieldset { border:1px solid #ccc; }
+legend {padding:5px; border:1px solid #ccc;}
+.disabled {background:none; border:none; color:#333;}
+.hidden-btn {display:none;}
+
+/*******
+Message Styling
+******/
+div.error {border: 1px solid maroon !important; color: black; background: pink; margin:0 0  10px; padding:10px; }
+div.success {background: #c2ffcc; border: 1px solid #5cde72; color: #114019; margin: 0 0 10px 0; padding: 10px;}
+div.notice {color: black; background-color: #EBF8A4; margin:0 0  10px 0; padding:10px; border:1px solid #A2D246;}

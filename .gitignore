@@ -1,0 +1,4 @@
+application/config/database.php
+application/config/development/*
+assets/captcha/*
+application/logs

@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+	<link REL="SHORTCUT ICON" HREF="<?=base_url('assets/images/favicon.ico');?>">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><?php echo $this->setting->school_name; ?></title>
+	<link href="<?php echo base_url('assets/stylesheets/nl.css'); ?>" rel="stylesheet" type="text/css" media="all" />
+	<link href="<?php echo base_url('assets/css/custom.css'); ?>" rel="stylesheet" type="text/css" media="all" />
+	<link href="<?php echo base_url('assets/css/custom-theme/jquery-ui-1.8.18.custom.css'); ?>" rel="stylesheet" type="text/css" media="all" />
+	<link href="<?php echo base_url('assets/stylesheets/960.css'); ?>" rel="stylesheet" type="text/css" media="all" />
+
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-ui-1.8.18.custom.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/myjs.js"></script>
+    
+    </head>
+	
+    <body>
+	
+	<div id="blur"></div>
+		<?php $this->load->view('layouts/header_top'); ?>
+		
+		
+		<!-- message dialog box -->
+		<div id="msgDialog"><p></p></div>
+		<!-- loading splash -->
+		<!--<div id="loader">
+			<img src="<?php echo base_url('assets/images/ajax-loader.gif')?>"/>
+		</div>-->
+
+		<div id="content">
+			
+			<div id="left">
+			<?php $this->load->view('layouts/_dynamic_menu'); ?>
+			</div>
+			
+			<?php echo $yield; ?>
+		
+			<div class="clear">&nbsp;</div>
+		
+			<div id="footer">
+				<p>&copy; Copyright 2011 Gocloud.</p>
+			</div>
+		</div>
+		
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+     <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+     <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
+    </body>
+</html>
